@@ -23,14 +23,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('admin/menu-item') }}">
-                        <i class="fa fa-list"></i> <span>{{ trans('admin.sidebar.menu') }}</span>
+                    <a href="{{ url(config('backpack.base.route_prefix', 'admin').'/project') }}">
+                        <i class="fa fa-folder-open-o"></i> <span>Projects</span>
                     </a>
                 </li>
-
                 <li>
-                    <a href="{{ url(config('backpack.base.route_prefix', 'admin').'/setting') }}">
-                        <i class="fa fa-cog"></i> <span>{{ trans('admin.sidebar.settings') }}</span>
+                    <a href="{{ url(config('backpack.base.route_prefix', 'admin').'/technology') }}">
+                        <i class="fa fa-code"></i> <span>Technologies</span>
                     </a>
                 </li>
 
@@ -59,7 +58,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url(config('backpack.base.route_prefix', 'admin').'/logs') }}">
+                    <a href="{{ url(config('backpack.base.route_prefix', 'admin').'/log') }}">
                         <i class="fa fa-terminal"></i> <span>{{ trans('admin.sidebar.logs') }}</span>
                     </a>
                 </li>

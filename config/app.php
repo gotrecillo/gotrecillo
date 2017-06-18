@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Gotrecillo'),
 
     /*
     |--------------------------------------------------------------------------
@@ -169,13 +169,16 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
+        Spatie\CookieConsent\CookieConsentServiceProvider::class,
         Backpack\Base\BaseServiceProvider::class,
         Backpack\CRUD\CrudServiceProvider::class,
         Backpack\BackupManager\BackupManagerServiceProvider::class,
-        Backpack\Settings\SettingsServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Backpack\PageManager\PageManagerServiceProvider::class,
-        Backpack\MenuCRUD\MenuCRUDServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
+        Laravelista\Ekko\EkkoServiceProvider::class,
+        Arcanedev\NoCaptcha\NoCaptchaServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -237,7 +240,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
+        'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
+        'Captcha' => Arcanedev\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 

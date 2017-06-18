@@ -7,15 +7,27 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue';
+import axios from 'axios';
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+Vue.filter('capitalize', window._.capitalize);
 
-Vue.component('example', require('./components/Example.vue'));
+window.github = axios.create({
+    baseURL: 'https://api.github.com/',
+    headers: {
+        'X-Requested-With': 'XMLHttpRequest'
+    }
+});
+
+window.api = axios.create({
+    baseURL: '/api/',
+    headers: {
+        'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+    }
+});
+
+Vue.component('github-profile', require('./components/GithubProfile'));
 
 const app = new Vue({
     el: '#app'

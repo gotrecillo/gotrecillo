@@ -2,6 +2,8 @@
 
 namespace Gotrecillo\Providers;
 
+use Backpack\PageManager\app\Models\Page;
+use Gotrecillo\Models\Project;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
@@ -23,7 +25,13 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Route::bind('slug', function ($value) {
+            return Page::where('slug', $value)->first();
+        });
+
+        Route::bind('portfolio', function ($value) {
+            return Project::with('technologies')->where('slug', $value)->first();
+        });
 
         parent::boot();
     }
