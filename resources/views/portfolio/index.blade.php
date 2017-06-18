@@ -8,8 +8,10 @@
 @endsection
 @section('content')
     <div class="container content">
-        @foreach ($projects as $project)
-            @include('includes.project', ['project' => $project])
-        @endforeach
+        <div class="columns">
+            @foreach ($projects as $project)
+                @include('includes.project', ['project' => $project])
+            @endforeach
+        </div>
     </div>
 @endsection

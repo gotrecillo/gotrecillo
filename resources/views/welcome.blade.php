@@ -11,9 +11,11 @@
     <div class="container content">
         <h2>Some of my works</h2>
         <hr>
-        @foreach ($projects as $project)
-            @include('includes.project', ['project' => $project])
-        @endforeach
+        <div class="columns">
+            @foreach ($projects as $project)
+                @include('includes.project', ['project' => $project])
+            @endforeach
+        </div>
     </div>
     <github-profile></github-profile>
 @endsection
