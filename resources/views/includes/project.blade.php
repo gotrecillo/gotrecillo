@@ -1,5 +1,5 @@
-<a href="{{route('portfolio.show', ['portfolio' => $project->slug])}}" class="portfolio">
-    <div class="card column is-full-mobile is-half-tablet is-one-quarter-desktop">
+<a href="{{route('portfolio.show', ['portfolio' => $project->slug])}}" class="portfolio column is-full-mobile is-half-tablet is-one-quarter-desktop">
+    <div class="card">
         <div class="card-image portfolio-image"
              style="background-image: url('/{{$project->image}}'); height: 200px">
         </div>
