@@ -1,8 +1,8 @@
 <template>
     <p>
         <language-link :repo="repo"/>
-        <span class="icon is-small left-margin"><i class="fa fa-repo"></i></span>
-        {{repo.repogazers_count}}
+        <span class="icon is-small left-margin"><i class="fa fa-star"></i></span>
+        {{repo.stargazers_count}}
         <span class="icon is-small left-margin"><i class="fa fa-code-fork"></i></span>
         {{repo.forks_count}}
         <span class="left-margin"> Updated {{date}} </span>
